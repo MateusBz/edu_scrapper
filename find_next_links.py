@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from requests import get
 
 
-def find_next_url(url):
+def find_next_links(url):
     start_link = url
     page = get(start_link)
     bs = BeautifulSoup(page.content, 'html.parser')
